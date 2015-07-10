@@ -1,0 +1,16 @@
+{
+  "mongodb": {
+    "host": "localhost",
+    "port": 27017,
+    "dbname": "DTK-Report"
+  },
+  "3rd-apps": {
+    "phantomjs": {
+      "path": "./3rdapps/phantomjs-2.0.0-windows/bin/phantomjs.exe",
+      "run-template-script": "./3rdapps/phantomjs-2.0.0-windows/run-template.js"
+    }
+  },
+  "temporary-path": "./temporary",
+  "host": "127.0.0.1",
+  "port": 3000
+}
