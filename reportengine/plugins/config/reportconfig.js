@@ -9,19 +9,19 @@ module.exports = function setup (options, imports, register) {
   var config = require('../../config.json');
   
   // ---------------------------------------------------------------------------
-  // class EDPConfig
-  var EDPConfig = function (cfg) {
+  // class ReportConfig
+  var ReportConfig = function (cfg) {
   	this.conf = new convict({root: "", app: "", 'template-root': "templates"});
   	this.conf.load(cfg);
   };
-  EDPConfig.prototype.get = function (name) {
+  ReportConfig.prototype.get = function (name) {
   	return this.conf.get(name);
   }
-  EDPConfig.prototype.set = function (name, val) {
+  ReportConfig.prototype.set = function (name, val) {
   	this.conf.set(name, val);
   }
 
-  var _report_config = new EDPConfig(config);
+  var _report_config = new ReportConfig(config);
 
   var api = {
     get: function (name) {
